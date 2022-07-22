@@ -23,11 +23,11 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	if (tree->left == NULL && tree->right == NULL)
 		return (0);
 
-	/* Count the height recursively, add 1 each pass: */	
+	/* Count the height recursively, add 1 each pass: */
 	height_left = 1 + binary_tree_height(tree->left);
 	height_right = 1 + binary_tree_height(tree->right);
 
-	/* If left side is greater than right then return left side */	
+	/* If left side is greater than right then return left side */
 	if (height_left >= height_right)
 	{
 		return (height_left);
